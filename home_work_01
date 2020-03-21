@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var first_name = "shmuel";
+        var last_name = "asherov";
+        var full_name = first_name+" "+last_name;
+        console.log (full_name); 
+        alert (full_name);
+     </script>
+</body>
+</html>
