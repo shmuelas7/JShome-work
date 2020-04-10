@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+        var arr = [];
+        for(var i=0;i<6;i++)
+         arr[i] = Number(prompt("Enter a number  "));
+        //2
+        for(i=0;i<arr.length;i++)
+          console.log("arr",arr[i]);
+        //3
+          var max=arr[0];
+          var min=arr[0];
+          for(i=0;i<arr.length;i++)
+            if(arr[i]>max)
+                  max=arr[i];
+                  else
+            if (arr[i]<min)
+               min=arr[i];
+        //4
+         var sum=0;
+         for(i=0;i<arr.length;i++)
+          sum=sum+arr[i];
+        //5
+        var odd=[];
+        var a=0,b=0;
+        var even=[];
+        for(i=0;i<arr.length;i++)
+        if(arr[i]%2==0)
+        {
+          even[a]=arr[i];
+          a++;
+        }
+          else
+          {
+              odd[b]=arr[i];
+              b++;
+          }
+        //6
+        var max1=arr[0];
+        var max2=0;
+          for(i=0;i<arr.length;i++)
+            if(arr[i]>max1)
+            {
+                  max2=max1;
+                  max1=arr[i];
+            }
+                else
+                if(arr[i]>max2)
+                {
+                    max2=arr[i];
+                }
+            console.log("max1=",max1 ,"max2=", max2);
+
+
+       // 7
+            var matrix=[
+            [true , true],
+            [true , false],
+            [false , true],
+            [false  , false],
+            ];
+            console.table(matrix);
+       //8
+       var chek1=[];
+       for(i=0;i<matrix.length;i++)
+           for(var j=0;j<matrix[i].length;j=j+2)
+           {
+               if(matrix[i][j]== true && matrix[i][j+1]==true)
+               chek1[i]=true;
+                 else 
+                 chek1[i]== false
+           }
+           var chek2=[];
+       for(i=0;i<matrix.length;i++)
+           for(var j=0;j<matrix[i].length;j=j+2)
+           {
+               if(matrix[i][j]== true || matrix[i][j+1]==true)
+               chek2[i]=true;
+                 else 
+                 chek2[i]== false
+           }
+           var chek3=[];
+       for(i=0;i<matrix.length;i++)
+           for(var j=0;j<matrix[i].length;j=j+2)
+           {
+               if(matrix[i][j]== true || matrix[i][j+1]==!(true))
+               chek3[i]=true;
+                 else 
+                 chek3[i]== false
+           }
+
+    </script>
+    
+    
+</body>
+</html>
