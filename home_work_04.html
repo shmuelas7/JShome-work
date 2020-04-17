@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+        revers(32243);
+        function revers(num)
+        {
+        
+            var x=0;
+            while(num>0)
+            {
+             x=x*10;
+              x= x+ Math.floor((num%10));
+              num =Math.floor(num/10);
+            }
+            console.log(`This is x: ${x}`);
+        }
+        //2
+         prim(15);
+         prim(7);
+        function prim(num)
+        {
+            for (var i=2; i<num;i++)
+            {
+                if(num%i==0)
+                {
+                   console.log(`not primeri ${num}`);
+                   break;
+                }
+                if(i==num-1)
+                console.log(`is a primeri ${num}`);
+            }
+        }
+        //3
+        getParamType([1,2,3]);
+         function getParamType(p){
+            console.log(typeof(p));
+            return typeof(p);
+        }
+        //4
+        function for_Dollar_to_Shekel(dolar)
+        {
+            shekel=dolar*3.6;
+            return shekel;
+        }
+        function for_shekel_to_dolar(shekel)
+        {
+            dolar=shekel/3.6;
+            return dolar;
+        }
+        function for_shekel_to_Euro(shekel)
+        {
+            Euro=shekel/3.88;
+            return Euro;
+        }
+        function for_Euro_to_Shekel(Euro)
+        {
+            shekel=Euro*3.88;
+            return shekel;
+        }
+    </script>
+
+</body>
+</html>
