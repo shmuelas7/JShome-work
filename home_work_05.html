@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1
+        function tim()
+        {
+        sec = Number(prompt("Enter a number  "));
+        counter = Number(prompt("Enter a number  "));
+        for(var i=0;i<counter;i++)
+        {
+            setTimeout(
+                function a()
+                {
+                    console.log(Math.random()*10);
+                },sec*1000*i      
+            )
+        }
+    }
+      //2
+        var arr=["a","b","c","d"];
+        for(var i=0;i<arr.length;i++)
+        {
+            var count=0;
+            setTimeout(
+              function ()
+                {
+                    console.log(`arr=${arr[count]}`);
+                    count++;
+                },4*1000*i      
+            )
+        }
+        //3
+        function sqr()
+        {
+            num = Number(prompt("Enter a number to sqr "));
+            console.log("the sqr:",Math.sqrt(num));
+        }
+        sqr();
+        //4
+        function pow()
+        {
+        num1 = Number(prompt("Enter a number to power "));
+        num2 = Number(prompt("Enter a number to power "));
+        console.log(Math.pow(num1, num2));
+        }
+        pow();
+        //5
+        var s="Titanium";
+        function  sl(str)
+        {
+            song=`Lyrics
+            You shout it out
+            But I can't hear a word you say
+            I'm talking loud not saying much
+            I'm criticized but all your bullets ricochet
+            You shoot me down, but I get up
+            I'm bulletproof nothing to lose
+            Fire away, fire away
+            Ricochet, you take your aim
+            Fire away, fire away
+            You shoot me down but I won't fall, I am titanium
+            You shoot me down but I won't fall
+            I am titanium, I am titanium, I am titanium, I am titanium
+            Cut me down
+            But it's you who has further to fall
+            Ghost town, haunted love
+            Raise your voice, sticks and stones may break my bones
+            I'm talking loud not saying much
+            I'm bulletproof nothing to lose
+            Fire away, fire away
+            Ricochet, you take your aim
+            Fire away, fire away
+            You shoot me down but I won't fall
+            I am titanium
+            You shoot me down but I won't fall
+            I am titanium, I am titanium
+            Stone-hard, machine gun
+            Firing at the ones who run
+            Stone-hard, thus bulletproof glass
+            You shoot me down but I won't fall, I am titanium
+            You shoot me down but I won't fall, I am titanium
+            You shoot me down but I won't fall, I am titanium
+            You shoot me down but I won't fall, I am titanium
+            I am titanium`
+            str=str.toLowerCase()
+            console.log("str=",str);
+             a=song.indexOf(str);
+             console.log("a=",a);
+        }
+        sl(s);
+    </script>
+</body>
+</html>
