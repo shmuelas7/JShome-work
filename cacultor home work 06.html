@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.calc{width:150px; height:100px;}
+.c{height:100px;width:25px;}
+
+</style>
+
+  <title>shmuel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+
+			function Azeret()
+			{
+				var i,Nmbr,Sum=1;
+				Nmbr=prompt("הכנס ערך לעצרת","0");
+				cc();
+				if (!isNaN(Nmbr))
+				{
+					if(Nmbr>0)
+					{
+						for(i=Nmbr; i>0; i--)
+							Sum*=i;
+					}
+					else if(Nmbr<0)
+					{
+						for(i=Nmbr; i<0; i++)
+							Sum*=i;
+					}
+					else if(Nmbr == 0)
+						Sum=0;
+					pushButton(Sum);
+				}
+				else
+					Eror("מספר עצרת");
+					}
+		///////////////////////////////////////////////////////			
+		var flag = 0;
+function pushButton(buttonValue)
+{
+       		
+			     if (buttonValue == '+'|| buttonValue == '*' || buttonValue == '/')
+					flag++;
+				else
+					flag=0;
+				if (flag>1)
+					Eror();
+       document.getElementById('screen').value += buttonValue;
+		  
+ }
+			////////////////////////////////////
+function Eror()
+			{
+                alert( 'erore');
+				cc();
+			}
+/////////////////////////////////////////////////
+function cc()
+			{
+				document.getElementById('screen').value="";
+			}
+/////////////////////////////////////////////////////
+function calculate()
+{
+     var answer = document.getElementById('screen').value;
+	 answer=eval(answer)
+     document.getElementById('screen').value = answer;
+}
+				
+
+</script>
+</head>
+<body>
+<div class="container bg-success">
+         <div class="row">
+	           <div class="col-11"> 
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <button class="btn btn-outline-secondary btn-warning" type="button" id="button" onclick="cc()">c</button>
+  </div>
+  <input type="text" id="screen" class="form-control" placeholder="0" aria-label="Example text with button addon" aria-describedby="button-addon1">
+</div>
+
+			   </div>
+		  </div>
+		  <div class="row">
+	           <div class="col-3 ">
+                  <input class="calc btn-primary" type="submit" value="1" onclick="pushButton(this.value);">
+
+			   </div>
+			    <div class="col-3">
+				<input class="calc btn-primary" type="submit" value="2" onclick="pushButton(this.value);">
+
+
+			   
+			   </div>
+			    <div class="col-3">
+			   <input class="calc btn-primary" type="submit" value="3" onclick="pushButton(this.value);">
+
+
+			   </div>
+			    <div class="col-3">
+                <input class="calc btn-secondary" type="submit" value='+' onclick="pushButton(this.value);">
+
+			   
+			   </div>
+		  </div>
+		   <div class="row">
+	           <div class="col-3">
+			   <input class="calc btn-primary" type="submit" value="4" onclick="pushButton(this.value);">
+
+
+			   </div>
+			    <div class="col-3">
+				<input class="calc btn-primary" type="submit" value="5" onclick="pushButton(this.value);">
+
+
+			   
+			   </div>
+			    <div class="col-3">
+			   <input class="calc btn-primary" type="submit" value="6" onclick="pushButton(this.value);">
+
+
+			   </div>
+			    <div class="col-3">
+                <input class="calc btn-secondary" type="submit" value='-' onclick="pushButton(this.value);">
+
+			   
+			   </div>
+		  </div>
+		  		   <div class="row">
+	           <div class="col-3">
+			   <input class="calc btn-primary" type="submit" value="7" onclick="pushButton(this.value);">
+
+
+			   </div>
+			    <div class="col-3">
+				<input class="calc btn-primary" type="submit" value="8" onclick="pushButton(this.value);">
+
+
+			   
+			   </div>
+			    <div class="col-3">
+			   <input class="calc btn-primary" type="submit" value="9" onclick="pushButton(this.value);">
+
+
+			   </div>
+			    <div class="col-3">
+                <input class="calc btn-secondary" type="submit" value='/' onclick="pushButton(this.value);">
+
+
+			   </div>
+		  </div>
+		  		   <div class="row">
+				   <div class="col-3">
+	           <input class="calc btn-secondary" type="submit" value='!' id="het" onclick="Azeret();">
+			   
+			   </div>
+			    <div class="col-3">
+				<input class="calc btn-primary" type="submit" value="0" onclick="pushButton(this.value);">
+
+
+			   
+			   </div>
+			    <div class="col-3">
+			   <input class="calc btn-secondary" type="submit" value='=' onclick="calculate(document.getElementById('screen').value);">
+
+
+			   </div>
+			    <div class="col-3">
+                <input class="calc btn-secondary" type="submit" value='*' onclick="pushButton(this.value);">
+
+			   
+			   </div>
+		  </div>
+		  
+
+</div>
+</body>
+</html>
